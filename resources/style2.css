@@ -1,0 +1,86 @@
+/*
+Theme Name: OceanWP Child
+Theme URI: https://oceanwp.org/
+Description: OceanWP WordPress theme example child theme.
+Author: Nick
+Author URI: https://oceanwp.org/
+Template: oceanwp
+Version: 1.0
+*/
+
+/* Parent stylesheet should be loaded from functions.php not using @import */body, html {height: 100%;}
+
+#braceletMakerInstructions {
+    color: black;
+    padding: 5px 0px 0px 0px;
+    font-family: 'Istok Web', sans-serif;
+    font-size: 12px ;
+    text-align: center;
+}
+
+.braceletCreator {
+  height:  calc(100% - 50px);
+  max-width: 1200px;
+  background: aqua;
+  margin: auto;
+}
+
+#buttonFloater {
+  background-color: blue;
+    float: left;
+    text-align: left;
+    height: calc(0.75*(100vh - 80px));
+  padding: auto;
+}
+
+#buttonContainer{
+  position: absolute;
+  background-color:white;
+  height: 175px;
+  top: 50px;
+  margin-top: -50px;
+  }
+
+/* Style the active class, and buttons on mouse-over */
+.activebtn, .btn:hover {
+  background-color: none;
+  color: #494949;
+  -webkit-transform: scale(1.1);
+}
+
+.btn {
+  display: block;
+  background: none;
+    border: none;
+  color: #666666;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  margin: auto;
+}
+
+.braceletContainer {
+  width: calc(0.75*(100vh - 80px));
+  height: calc(0.75*(100vh - 80px));
+  background-color: red;
+  margin: auto;
+}
+.buyContainer{
+  position: relative;
+  float: right;
+  top: -40px;
+  right: 10;
+} 
+
+.buyButton{
+  background-color: white;
+  width: 100px;
+}
+
+.carouselContainer {
+  background-color: blue;
+  width: 100%;
+  height: calc(0.25*(100vh - 80px));
+  margin: auto;
+}
