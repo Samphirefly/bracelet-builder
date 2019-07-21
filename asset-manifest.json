@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.df62719c.chunk.css",
+    "main.js": "/static/js/main.e4c1a843.chunk.js",
+    "main.js.map": "/static/js/main.e4c1a843.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
+    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
+    "static/css/2.18585a14.chunk.css": "/static/css/2.18585a14.chunk.css",
+    "static/js/2.80452d32.chunk.js": "/static/js/2.80452d32.chunk.js",
+    "static/js/2.80452d32.chunk.js.map": "/static/js/2.80452d32.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.774da2e16e8b328462f719402e300dee.js": "/precache-manifest.774da2e16e8b328462f719402e300dee.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.18585a14.chunk.css.map": "/static/css/2.18585a14.chunk.css.map",
+    "static/css/main.df62719c.chunk.css.map": "/static/css/main.df62719c.chunk.css.map",
+    "static/media/Amethyst.png": "/static/media/Amethyst.fcd627ee.png",
+    "static/media/Black.png": "/static/media/Black.e26d7f91.png",
+    "static/media/Malachite.png": "/static/media/Malachite.3ac2d24f.png",
+    "static/media/Orange.png": "/static/media/Orange.603a464f.png",
+    "static/media/Quartz.png": "/static/media/Quartz.ba4da43f.png",
+    "static/media/Ruby.png": "/static/media/Ruby.2eab8114.png",
+    "static/media/Sapphire.png": "/static/media/Sapphire.d35842dc.png",
+    "static/media/Yellow.png": "/static/media/Yellow.f6cb2ae1.png",
+    "static/media/slick-theme.css": "/static/media/slick.f97e3bbf.svg"
+  }
+}
