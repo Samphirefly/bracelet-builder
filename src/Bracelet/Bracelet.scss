@@ -1,0 +1,37 @@
+$stoneWidth: 55px;
+$containerWidth: 100%;
+.stoneContainerContainer {
+  width: $containerWidth;
+  min-height: $containerWidth;
+  // border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.stoneContainer {
+	position: relative;
+  width: var(--containerWidth);
+  height: var(--containerWidth);
+  margin: 25px;
+}
+
+.stoneContainer:before {
+	content: "";
+	position: absolute;
+	top: 0; left: 0;
+  border: 5px solid #829090;
+  width: calc( 100% - 2px * 2);
+  height: calc( 100% - 2px * 2 );
+  border-radius: 50%;
+}
+
+.stoneContainer .stone {
+	position: absolute;
+	top: 50%; left: 50%;
+    width: $stoneWidth;
+    height: $stoneWidth;
+    margin: calc( -50px / 2 );
+    border-radius: 50%;
+    transform: rotate(var(--angle, 0)) translate(calc(var(--parentWidth,0) /2)) rotate(var(--angle, 0))
+}
