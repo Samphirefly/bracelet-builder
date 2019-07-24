@@ -5,7 +5,7 @@ import { stones as allStones, sizes } from '../config';
 import SizeButtons from '../SizeButtons/SizeButtons';
 import './App.scss';
 
-import { createStones, toggleSelected, selectAllOfType, deselectAll} from './utils';
+import { createStones, toggleSelected, selectAllOfType, deselectAll, replaceSelectedStone } from './utils';
 
 const defaultStoneList = createStones([], sizes.large.numberStones);
 
@@ -13,20 +13,14 @@ const App = () => {
   const [stones, setStones] = useState(defaultStoneList);
   const [radius, setRadius] = useState(sizes.large.radius);
 
-  const handler = (e) => {
-    const size = sizes[e.target.value]
-    setStones(createStones(stones, size.numberStones))
-    setRadius(size.radius)
-  }
-
-  const setSelectedStones = (newStone) => setStones(stones.map(stone =>
-    stone.selected ? newStone : stone
-  ))
-
   return (
     <div className="pageContainer">
       <div>
-        <SizeButtons handler={handler} />
+        <SizeButtons handler={(e) => {
+          const size = sizes[e.target.value]
+          setStones(createStones(stones, size.numberStones))
+          setRadius(size.radius)
+        }} />
         <Bracelet
           selectStone={(stones, selectIndex) => setStones(toggleSelected(stones, selectIndex))}
           selectAllOfType={chosenStone => setStones(selectAllOfType(chosenStone, stones))}
@@ -34,7 +28,7 @@ const App = () => {
           radius={radius}
           stones={stones}
         />
-        <Stones stones={allStones} setSelectedStones={setSelectedStones} />
+        <Stones stones={allStones} setSelectedStones={(newStone) => setStones(replaceSelectedStone(stones, newStone))} />
       </div>
     </div>
   )

@@ -23,3 +23,7 @@ export const selectAllOfType = (stones, chosenStone) => stones.map(stone =>
 )
 
 export const deselectAll = stones => stones.map(stone => ({ ...stone, selected: false }))
+
+export const replaceSelectedStone = (stones, newStone) => stones.map(stone =>
+  stone.selected ? newStone : stone
+)
