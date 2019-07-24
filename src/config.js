@@ -29,3 +29,21 @@ export const stones = [
     { id: "orange", name: "Orange", text: 'This is Orange' },
     { id: "black", name: "Black", text: 'This is Black' },
 ]
+
+export const sizes = {
+    large: {
+      id: 'large',
+      numberStones: 24,
+      radius: 500
+    },
+    medium: {
+      id: 'medium',
+      numberStones: 22,
+      radius: 450
+    },
+    small: {
+      id: 'small',
+      numberStones: 20,
+      radius: 400
+    }
+  }

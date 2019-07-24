@@ -1,46 +1,11 @@
 import React, { useState } from 'react';
 import Bracelet from './Bracelet/Bracelet';
 import Stones from './Stones/Stones';
-import { stones as allStones } from './config';
+import { stones as allStones, sizes } from './config';
+import SizeButtons from './SizeButtons/SizeButtons';
 import './App.scss';
 
-const sizes = {
-  large: {
-    id: 'large',
-    numberStones: 24,
-    radius: 500
-  },
-  medium: {
-    id: 'medium',
-    numberStones: 22,
-    radius: 450
-  },
-  small: {
-    id: 'small',
-    numberStones: 20,
-    radius: 400
-  }
-}
-
-const createStones = (stones, numberStonesRequired) => {
-  if (numberStonesRequired < stones.length) {
-    return stones.slice(0, numberStonesRequired)
-  } else {
-    return [
-      ...stones,
-      ...Array(numberStonesRequired - stones.length).fill(allStones[0])
-    ]
-  }
-}
-
-
-// const BraceletSizeSelector = ({ handler }) => (
-//   <div>
-//     <button onClick={handler} value="small">Small</button>
-//     <button onClick={handler} value="medium">Medium</button>
-//     <button onClick={handler} value="large">Large</button>
-//   </div>
-// );
+import { createStones } from './utils';
 
 const defaultStoneList = createStones([], sizes.large.numberStones);
 
@@ -73,30 +38,12 @@ const App = () => {
   }
 
 
-  const SizeButtons = () => (
-
-    <div id="buttonContainer">
-      <button btn-type="smallbtn" className="btn" onClick={handler} value="small">
-        Small Bracelet <br />
-        6.5"
-    </button>
-      <button btn-type="mediumbtn" className="btn activebtn" onClick={handler} value="medium">
-        Medium Bracelet <br />
-        7"
-    </button>
-      <button btn-type="largebtn" className="btn" onClick={handler} value="large">
-        Large Bracelet <br />
-        7.5"
-    </button>
-    </div>
-
-  )
 
 
   return (
     <div className="pageContainer">
       <div>
-        <SizeButtons />
+        <SizeButtons handler={handler} />
         <Bracelet selectStone={selectStone} radius={radius} stones={stones} selectAllOfType={selectAllOfType} deselectAll={deselectAll} />
         <Stones stones={allStones} setSelectedStones={setSelectedStones} />
       </div>
