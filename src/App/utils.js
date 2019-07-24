@@ -17,3 +17,9 @@ export const toggleSelected = (stones, selectIndex) => stones.map((stone, index)
     ...stone, selected: !stone.selected
   } : stone
 )
+
+export const selectAllOfType = (stones, chosenStone) => stones.map(stone =>
+  stone.id === chosenStone.id ? { ...stone, selected: true } : { ...stone, selected: false }
+)
+
+export const deselectAll = stones => stones.map(stone => ({ ...stone, selected: false }))
