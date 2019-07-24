@@ -1,7 +1,7 @@
 
 import React from 'react';
 import './Stones.scss'
-import { images } from '../config';
+import { images } from '../../config';
 import ReactDOM from 'react-dom';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";

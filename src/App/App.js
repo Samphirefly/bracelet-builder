@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Bracelet from '../Bracelet/Bracelet';
-import Stones from '../Stones/Stones';
+import Bracelet from './Bracelet/Bracelet';
+import Stones from './Stones/Stones';
 import { stones as allStones, sizes } from '../config';
-import SizeButtons from '../SizeButtons/SizeButtons';
+import SizeButtons from './SizeButtons/SizeButtons';
 import './App.scss';
 
 import { createStones, toggleSelected, selectAllOfType, deselectAll, replaceSelectedStone } from './utils';

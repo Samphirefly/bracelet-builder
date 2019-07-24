@@ -1,6 +1,6 @@
 import React from 'react';
 import './Bracelet.scss';
-import { images } from '../config';
+import { images } from '../../config';
 
 const Bracelet = ({ stones, radius, selectStone, selectAllOfType, deselectAll }) => (
   <div className="stoneContainerContainer">
