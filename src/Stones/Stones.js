@@ -25,7 +25,7 @@ const Stones = props => {
             ...props.stones,
             ...props.stones
           ].map(stone => (
-            <div>
+            <div key={stone.id}>
               <div className="stone-container">
                 <p className="stone-title">{stone.name}</p>
               </div>

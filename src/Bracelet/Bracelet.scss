@@ -1,10 +1,8 @@
 @import "../style.scss";
 
-$containerWidth: 100%;
 
 .stoneContainerContainer {
-    width: $containerWidth;
-    min-height: $containerWidth;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,15 +16,15 @@ $containerWidth: 100%;
     margin: 25px;
 }
 
-.stoneContainer:before {
+.braceletRing {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     border: 5px solid #829090;
-    width: calc( 100% - 2px * 2);
-    height: calc( 100% - 2px * 2 );
     border-radius: 50%;
+    width: 100%;
+    height: 100%;
 }
 
 .stoneContainer .stone {
@@ -35,7 +33,7 @@ $containerWidth: 100%;
     left: 50%;
     width: $stoneWidth;
     height: $stoneWidth;
-    margin: calc( -50px / 2 );
+    margin: #{-$stoneWidth / 2};
     border-radius: 50%;
     transform: rotate(var(--angle, 0)) translate(calc(var(--parentWidth,0) /2)) rotate(var(--angle, 0));
     box-shadow: 0 0 8px 8px white inset;
