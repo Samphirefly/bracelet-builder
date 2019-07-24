@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Bracelet from './Bracelet/Bracelet';
-import Stones from './Stones/Stones';
+import Stones from './StoneCarousel/Stones';
 import { stones as allStones, sizes } from '../config';
 import SizeButtons from './SizeButtons/SizeButtons';
 import './App.scss';
