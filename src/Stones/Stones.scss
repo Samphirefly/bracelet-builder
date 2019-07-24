@@ -1,22 +1,23 @@
-#owl-demo .item{
+#owl-demo .item {
     margin: 3px;
-  }
-#owl-demo .item img{
-display: block;
-width: 100%;
-height: auto;
+}
+
+#owl-demo .item img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .stone-container {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .stone-title {
-  font-family: "Cinzel Decorative";
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  margin: 0;
-  color: black;
-  font-weight: 200;
+    font-family: "Cinzel Decorative";
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0;
+    color: black;
+    font-weight: 200;
 }

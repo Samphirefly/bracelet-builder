@@ -6,7 +6,6 @@ const Bracelet = ({ stones, radius, selectStone, selectAllOfType, deselectAll })
   <div className="stoneContainerContainer">
 
     <div className="stoneContainer" style={{ '--containerWidth': `${radius}px` }} onClick={() => {
-      console.log("Deselect All")
       deselectAll()
     }}>
       {
@@ -18,7 +17,7 @@ const Bracelet = ({ stones, radius, selectStone, selectAllOfType, deselectAll })
             style={{
               '--angle': (270 + (360 / stones.length) * i) + "deg",
               '--parentWidth': `${radius}px`,
-              filter: stone.selected && 'drop-shadow(0px 0px 5px #48E1FF)'
+              filter: stone.selected ? 'drop-shadow(0px 0px 5px #48E1FF)' : 'drop-shadow(0px 0px 5px white)'
             }}
             onClick={(e) => { selectStone(stones, i); e.stopPropagation() }}
             onDoubleClick={() => {

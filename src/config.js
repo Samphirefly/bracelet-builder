@@ -6,7 +6,7 @@ import Amethyst from './Images/Amethyst.png'
 import Quartz from './Images/Quartz.png'
 import Yellow from './Images/Yellow.png'
 import Orange from './Images/Orange.png'
-import Black from './Images/Black.png'
+import Black from './Images/Grey.png'
 
 export const images = {
     malachite: Malachite,

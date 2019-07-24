@@ -1,5 +1,4 @@
-@mixin faded($offset, $blur-radius, $spread-radius)
-{
+@mixin faded($offset, $blur-radius, $spread-radius) {
     &.faded-left:after {
         box-shadow: inset $offset 0 $blur-radius (-$spread-radius);
     }
@@ -9,7 +8,7 @@
     }
 
     &.faded-top:after {
-       box-shadow: inset 0 $offset $blur-radius (-$spread-radius);
+        box-shadow: inset 0 $offset $blur-radius (-$spread-radius);
     }
 
     &.faded-bottom:after {
@@ -21,7 +20,7 @@
     }
 
     &.faded-left.faded-top:after {
-        box-shadow: inset $offset ($offset) $blur-radius (-$spread-radius);
+        box-shadow: inset $offset $offset $blur-radius (-$spread-radius);
     }
 
     &.faded-right.faded-bottom:after {
@@ -33,7 +32,7 @@
     }
 
     &.faded-top.faded-bottom:after {
-       box-shadow: inset 0 $offset $blur-radius (-$spread-radius), inset 0 (-$offset) $blur-radius (-$spread-radius);
+        box-shadow: inset 0 $offset $blur-radius (-$spread-radius), inset 0 (-$offset) $blur-radius (-$spread-radius);
     }
 
     &.faded-left.faded-bottom:after {
@@ -41,28 +40,25 @@
     }
 
     &.faded-top.faded-right.faded-bottom:after {
-        box-shadow: inset (-$offset/2) 0 $blur-radius $spread-radius;
+        box-shadow: inset (-$offset / 2) 0 $blur-radius $spread-radius;
     }
 
     &.faded-left.faded-right.faded-bottom:after {
-        box-shadow: inset 0 (-$offset/2) $blur-radius $spread-radius;
+        box-shadow: inset 0 (-$offset / 2) $blur-radius $spread-radius;
     }
 
     &.faded-left.faded-top.faded-bottom:after {
-        box-shadow: inset ($offset/2) 0 $blur-radius $spread-radius;
+        box-shadow: inset ($offset / 2) 0 $blur-radius $spread-radius;
     }
 
     &.faded-left.faded-top.faded-right:after {
-        box-shadow: inset 0 ($offset/2) $blur-radius $spread-radius;
+        box-shadow: inset 0 ($offset / 2) $blur-radius $spread-radius;
     }
 
     &.faded-all:after, &.faded-left.faded-top.faded-right.faded-bottom:after {
         box-shadow: inset 0 0 $blur-radius $spread-radius;
     }
 }
-
-
-
 
 $faded-offset: 40px !default;
 $faded-blur-radius: 40px !default;
@@ -105,17 +101,17 @@ $faded-wide-spread-radius: 28px !default;
 
 // Colored panel
 .panel {
-  background-color: blue;
-  padding: 1em;
-  color: white;
-  
-  .faded {
-    // Use a text color the same as the background colour of the panel will mean the fade effect matches the backround correctly
-    color: blue;
-  }
+    background-color: blue;
+    padding: 1em;
+    color: white;
+
+    .faded {
+        // Use a text color the same as the background colour of the panel will mean the fade effect matches the backround correctly
+        color: blue;
+    }
 }
 
 // Scale images down if they're too large for available space
 img {
-  max-width: 100%;
+    max-width: 100%;
 }
