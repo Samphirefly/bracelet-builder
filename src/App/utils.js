@@ -1,4 +1,4 @@
-import { stones as allStones } from './config';
+import { stones as allStones } from '../config';
 
 
 export const createStones = (stones, numberStonesRequired) => {
