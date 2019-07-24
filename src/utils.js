@@ -11,3 +11,9 @@ export const createStones = (stones, numberStonesRequired) => {
       ]
     }
   }
+
+export const toggleSelected = (stones, selectIndex) => stones.map((stone, index) =>
+  selectIndex === index ? {
+    ...stone, selected: !stone.selected
+  } : stone
+)

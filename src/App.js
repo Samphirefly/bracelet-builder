@@ -5,7 +5,7 @@ import { stones as allStones, sizes } from './config';
 import SizeButtons from './SizeButtons/SizeButtons';
 import './App.scss';
 
-import { createStones } from './utils';
+import { createStones, toggleSelected } from './utils';
 
 const defaultStoneList = createStones([], sizes.large.numberStones);
 
@@ -19,12 +19,6 @@ const App = () => {
     setRadius(size.radius)
   }
 
-  const selectStone = (stones, selectIndex) => setStones(stones.map((stone, index) =>
-    selectIndex === index ? {
-      ...stone, selected: !stone.selected
-    } : stone
-  ))
-
   const setSelectedStones = (newStone) => setStones(stones.map(stone =>
     stone.selected ? newStone : stone
   ))
@@ -37,14 +31,17 @@ const App = () => {
     ))
   }
 
-
-
-
   return (
     <div className="pageContainer">
       <div>
         <SizeButtons handler={handler} />
-        <Bracelet selectStone={selectStone} radius={radius} stones={stones} selectAllOfType={selectAllOfType} deselectAll={deselectAll} />
+        <Bracelet
+          selectStone={(stones, selectIndex) => setStones(toggleSelected(stones, selectIndex))}
+          radius={radius}
+          stones={stones}
+          selectAllOfType={selectAllOfType}
+          deselectAll={deselectAll}
+        />
         <Stones stones={allStones} setSelectedStones={setSelectedStones} />
       </div>
     </div>
