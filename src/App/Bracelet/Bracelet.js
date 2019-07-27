@@ -8,7 +8,10 @@ const Bracelet = ({ stones, radius, selectStone, selectAllOfType, deselectAll })
     <div className="stoneContainer" style={{ '--containerWidth': `${radius}px` }} onClick={() => {
       deselectAll()
     }}>
+
+          <div className="braceletRingContainer">
           <div className="braceletRing"></div>
+          </div>
 
       {
         stones.map((stone, i) => (

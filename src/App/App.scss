@@ -1,11 +1,12 @@
 @import "../style.scss";
 
+
 .braceletContainer {  
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 2px solid red;
+    
     overflow:hidden;
 }
 
@@ -16,13 +17,14 @@
     max-width: 1200px;
     background: unset;
     margin: auto;
-    border: 2px solid yellow;
+    
     overflow: hidden;
+    padding-bottom: 25px;
 }
 
 .pageContainer {
     width: 100%;
-    min-height: 100%;
+    flex: 1;
     display: flex;
     justify-content: center;
     position: relative;

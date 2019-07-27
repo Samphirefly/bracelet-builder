@@ -19,14 +19,14 @@ const Stones = (props) => {
       nav: false,
       dots: false,
       responsive: {
-        0: {
-          items: 1,
-        },
         600: {
-          items: 3,
+          items: 4,
         },
         1000: {
           items: 5,
+        },
+        1200: {
+          items: 6,
         }
       }
     })
@@ -36,12 +36,8 @@ const Stones = (props) => {
       {
         props.stones.map(stone => (
           <div className="item" key={stone.id}>
-            <div className="stone-container">
               <p className="stone-title">{stone.name}</p>
-            </div>
-            <div className="square-image-container">
               <img className="stoneId" src={images[stone.id]} alt={stone.text} onClick={() => { props.setSelectedStones(stone) }} />
-            </div>
           </div>
         ))
       }

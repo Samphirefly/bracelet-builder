@@ -28,6 +28,7 @@ const App = () => {
           selectAllOfType={chosenStone => setStones(selectAllOfType(chosenStone, stones))}
           deselectAll={() => setStones(deselectAll)}
           radius={radius}
+          maxRadius={sizes.large.radius}
           stones={stones}
         />
         <Stones stones={allStones} setSelectedStones={(newStone) => setStones(replaceSelectedStone(stones, newStone))} />
