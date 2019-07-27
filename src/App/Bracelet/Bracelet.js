@@ -10,7 +10,8 @@ const Bracelet = ({ stones, radius, selectStone, selectAllOfType, deselectAll })
     }}>
 
           <div className="braceletRingContainer">
-          <div className="braceletRing"></div>
+            <div className="braceletRing">
+            </div>
           </div>
 
       {
