@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/bracelet-builder/static/css/main.e622ed7e.chunk.css",
+    "main.css": "/bracelet-builder/static/css/main.c32ca991.chunk.css",
     "main.js": "/bracelet-builder/static/js/main.508545fa.chunk.js",
     "main.js.map": "/bracelet-builder/static/js/main.508545fa.chunk.js.map",
     "runtime~main.js": "/bracelet-builder/static/js/runtime~main.1e259270.js",
@@ -9,10 +9,10 @@
     "static/js/2.1976ccff.chunk.js": "/bracelet-builder/static/js/2.1976ccff.chunk.js",
     "static/js/2.1976ccff.chunk.js.map": "/bracelet-builder/static/js/2.1976ccff.chunk.js.map",
     "index.html": "/bracelet-builder/index.html",
-    "precache-manifest.d4c29b13501da9291b0f695cc9df890c.js": "/bracelet-builder/precache-manifest.d4c29b13501da9291b0f695cc9df890c.js",
+    "precache-manifest.e622008082eba7c6bc22bc9935bffc6e.js": "/bracelet-builder/precache-manifest.e622008082eba7c6bc22bc9935bffc6e.js",
     "service-worker.js": "/bracelet-builder/service-worker.js",
     "static/css/2.16aca965.chunk.css.map": "/bracelet-builder/static/css/2.16aca965.chunk.css.map",
-    "static/css/main.e622ed7e.chunk.css.map": "/bracelet-builder/static/css/main.e622ed7e.chunk.css.map",
+    "static/css/main.c32ca991.chunk.css.map": "/bracelet-builder/static/css/main.c32ca991.chunk.css.map",
     "static/media/Amethyst.png": "/bracelet-builder/static/media/Amethyst.fcd627ee.png",
     "static/media/Grey.png": "/bracelet-builder/static/media/Grey.a1dea0c8.png",
     "static/media/Malachite.png": "/bracelet-builder/static/media/Malachite.3ac2d24f.png",

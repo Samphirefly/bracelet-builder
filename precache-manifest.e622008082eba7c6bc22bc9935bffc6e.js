@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0425d867fb7670b5ab229ac538f13291",
+    "revision": "6ac4a76e06b41759a8a90afc93cec3b3",
     "url": "/bracelet-builder/index.html"
   },
   {
@@ -8,15 +8,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bracelet-builder/static/css/2.16aca965.chunk.css"
   },
   {
-    "revision": "7b3597ba523f1ba88d5e",
-    "url": "/bracelet-builder/static/css/main.e622ed7e.chunk.css"
+    "revision": "58a7240d2c3b2d848c5a",
+    "url": "/bracelet-builder/static/css/main.c32ca991.chunk.css"
   },
   {
     "revision": "479fe1e35854d0a53639",
     "url": "/bracelet-builder/static/js/2.1976ccff.chunk.js"
   },
   {
-    "revision": "7b3597ba523f1ba88d5e",
+    "revision": "58a7240d2c3b2d848c5a",
     "url": "/bracelet-builder/static/js/main.508545fa.chunk.js"
   },
   {
