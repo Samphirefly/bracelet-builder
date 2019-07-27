@@ -1,11 +1,29 @@
+$smallWidth: 135px;
+
+.carouselContainer {
+    height: $smallWidth;
+    background-color: unset;
+    width: 60%;
+    margin: auto;
+    
+    border: 2px solid blue;
+}
+
+.owl-carousel {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
 .owl-carousel .item {
-    height: 150px;
-    padding: 1rem;
+    height: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .stone-container {
     display: flex;
     justify-content: center;
+    flex:0;
 }
 
 .stone-title {
@@ -15,4 +33,40 @@
     margin: 0;
     color: black;
     font-weight: 200;
+}
+
+.square-image-container {
+    flex: 1;
+    height: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.owl-stage {
+    height: 100% !important;
+}
+
+.owl-carousel.owl-theme.owl-loaded.owl-drag {
+
+    overflow: hidden !important;
+    height: 100% !important;
+}
+
+.owl-item {
+    height: 100%;
+}
+.owl-item .item {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.owl-stage-outer {
+    height: 100%;
+}
+
+.owl-carousel .owl-item img {
+    height: 100%;
+    width: auto;
 }

@@ -60,12 +60,7 @@ Version: 1.0
   margin: auto;
 }
 
-.braceletContainer {
-  width: calc(0.75*(100vh - 80px));
-  height: calc(0.75*(100vh - 80px));
-  background-color: red;
-  margin: auto;
-}
+
 .buyContainer{
   position: relative;
   float: right;
@@ -76,11 +71,4 @@ Version: 1.0
 .buyButton{
   background-color: white;
   width: 100px;
-}
-
-.carouselContainer {
-  background-color: blue;
-  width: 100%;
-  height: calc(0.25*(100vh - 80px));
-  margin: auto;
 }

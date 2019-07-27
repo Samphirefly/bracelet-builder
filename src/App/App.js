@@ -14,6 +14,8 @@ const App = () => {
   const [radius, setRadius] = useState(sizes.large.radius);
 
   return (
+    <>
+    <h3 className="braceletMakerInstructions" id="braceletMakerInstructions">Design your own bracelet. Click to swap stones.</h3>
     <div className="pageContainer">
       <div>
         <SizeButtons handler={(e) => {
@@ -31,6 +33,7 @@ const App = () => {
         <Stones stones={allStones} setSelectedStones={(newStone) => setStones(replaceSelectedStone(stones, newStone))} />
       </div>
     </div>
+    </>
   )
 }
 

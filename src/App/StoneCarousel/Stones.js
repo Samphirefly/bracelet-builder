@@ -12,16 +12,15 @@ const jQuery = window.jQuery;
 
 const Stones = (props) => {
   useLayoutEffect(() => {
-    debugger
     jQuery('.owl-carousel').owlCarousel({
       loop: true,
       margin: 10,
       responsiveClass: true,
       nav: false,
+      dots: false,
       responsive: {
         0: {
           items: 1,
-          
         },
         600: {
           items: 3,
@@ -40,7 +39,9 @@ const Stones = (props) => {
             <div className="stone-container">
               <p className="stone-title">{stone.name}</p>
             </div>
-            <img className="stoneId" src={images[stone.id]} alt={stone.text} onClick={() => { props.setSelectedStones(stone) }} />
+            <div className="square-image-container">
+              <img className="stoneId" src={images[stone.id]} alt={stone.text} onClick={() => { props.setSelectedStones(stone) }} />
+            </div>
           </div>
         ))
       }

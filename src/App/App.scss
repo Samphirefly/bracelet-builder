@@ -1,3 +1,25 @@
+@import "../style.scss";
+
+.braceletContainer {  
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid red;
+    overflow:hidden;
+}
+
+.braceletCreator {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - #{$pageHeaderHeight});
+    max-width: 1200px;
+    background: unset;
+    margin: auto;
+    border: 2px solid yellow;
+    overflow: hidden;
+}
+
 .pageContainer {
     width: 100%;
     min-height: 100%;
