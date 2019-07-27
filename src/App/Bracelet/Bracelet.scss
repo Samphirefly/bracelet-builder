@@ -1,30 +1,5 @@
 @import "../../style.scss";
 
-.stoneContainerContainer {
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-
-.braceletRingContainer{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding: #{ $stoneWidth / 2 };
-}
-
-.braceletRing {
-    border: 5px solid #829090;
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-}
 
 
 @mixin stone($scaleFactor) {
@@ -43,7 +18,7 @@
     box-shadow: 0 0 8px 8px white inset;
 }
 
-@mixin stoneContainer($scaleFactor) {
+@mixin braceletInnerContainer($scaleFactor) {
     position: relative;
     width: calc(
         var(--containerWidth) * #{$scaleFactor}
@@ -53,29 +28,55 @@
     );
 }
 
-@media screen and ( min-height: 600px ) { 
-    .stoneContainer {
-        @include stoneContainer(0.7);
-        .stone {
-            @include stone(0.7);
-        }   
-    }
- }
 
-@media screen and ( min-height: 768px ) { 
-    .stoneContainer {
-        @include stoneContainer(0.85);
-        .stone {
-            @include stone(0.85);
-        }   
-    }
- }
+.braceletOuterContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 
- @media screen and ( min-height: 1000px ) { 
-    .stoneContainer {
-        @include stoneContainer(1.25);
-        .stone {
-            @include stone(1.25);
+    .braceletInnerContainer {
+        .braceletRingContainer{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: #{ $stoneWidth / 2 };
+            .braceletRing {
+                border: 5px solid #829090;
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    @media screen and ( min-height: 600px ) { 
+        .braceletInnerContainer {
+            @include braceletInnerContainer(0.7);
+            .stone {
+                @include stone(0.7);
+            }   
+        }
+     }
+    
+    @media screen and ( min-height: 768px ) { 
+        .braceletInnerContainer {
+            @include braceletInnerContainer(0.85);
+            .stone {
+                @include stone(0.85);
+            }   
+        }
+     }
+    
+     @media screen and ( min-height: 1000px ) { 
+        .braceletInnerContainer {
+            @include braceletInnerContainer(1.25);
+            .stone {
+                @include stone(1.25);
+            }
         }
     }
 }

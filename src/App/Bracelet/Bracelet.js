@@ -3,9 +3,9 @@ import './Bracelet.scss';
 import { images } from '../../config';
 
 const Bracelet = ({ stones, radius, selectStone, selectAllOfType, deselectAll }) => (
-  <div className="stoneContainerContainer">
+  <div className="braceletOuterContainer">
 
-    <div className="stoneContainer" style={{ '--containerWidth': `${radius}px` }} onClick={() => {
+    <div className="braceletInnerContainer" style={{ '--containerWidth': `${radius}px` }} onClick={() => {
       deselectAll()
     }}>
 
