@@ -16,7 +16,7 @@ const Stones = (props) => {
       margin: 10,
       responsiveClass: true,
       nav: false,
-      dots: false,
+      dots: true,
       responsive: {
         600: {
           items: 4,
