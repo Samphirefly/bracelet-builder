@@ -1,41 +1,49 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable react/prop-types */
 import React from 'react';
 import './Bracelet.scss';
 import { images } from '../../config';
 
-const Bracelet = ({ stones, radius, selectStone, selectAllOfType, deselectAll }) => (
+const selectedFilter = 'drop-shadow(0px 0px 5px #48E1FF)';
+
+const Bracelet = ({
+  stones, radius, selectStone, selectAllOfType, deselectAll
+}) => (
   <div className="braceletOuterContainer">
 
-    <div className="braceletInnerContainer" style={{ '--containerWidth': `${radius}px` }} onClick={() => {
-      deselectAll()
-    }}>
+    <div
+      className="braceletInnerContainer"
+      style={{ '--containerWidth': `${radius}px` }}
+      onClick={() => {
+        deselectAll();
+      }}
+    >
 
-          <div className="braceletRingContainer">
-            <div className="braceletRing">
-            </div>
-          </div>
+      <div className="braceletRingContainer">
+        <div className="braceletRing" />
+      </div>
 
       {
         stones.map((stone, i) => (
           <div
-            key={i}
+            key={stone.id}
             className="stone"
 
             style={{
-              '--angle': (270 + (360 / stones.length) * i) + "deg",
+              '--angle': `${270 + (360 / stones.length) * i}deg`,
               '--parentWidth': `${radius}px`,
-              filter: stone.selected ? 'drop-shadow(0px 0px 5px #48E1FF)' : 'drop-shadow(0px 0px 5px white)'
+              filter: stone.selected && selectedFilter
             }}
-            onClick={(e) => { selectStone(stones, i); e.stopPropagation() }}
-            onDoubleClick={() => {
-              selectAllOfType(stone)
-            }}
+            onClick={(e) => { selectStone(stone.id); e.stopPropagation(); }}
+            onDoubleClick={() => selectAllOfType(stone)}
           >
-            <img src={images[stone.id]} style={{ width: "100%", height: "100%" }} alt={stone.text} />
+            <img src={images[stone.id]} style={{ width: '100%', height: '100%' }} alt={stone.text} />
           </div>
         ))
       }
     </div>
   </div>
-)
+);
 
 export default Bracelet;
