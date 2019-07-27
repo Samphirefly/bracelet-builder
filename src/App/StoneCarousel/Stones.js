@@ -3,12 +3,11 @@ import React, { useLayoutEffect } from 'react';
 import './Stones.scss'
 import { images } from '../../config';
 import ReactDOM from 'react-dom';
-
 import 'owl.carousel';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 
-const jQuery = window.jQuery;
+const jQuery = window.jQuery
 
 const Stones = (props) => {
   useLayoutEffect(() => {
